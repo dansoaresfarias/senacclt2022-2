@@ -2,7 +2,6 @@
     font-family: Cambria;
 }
 
-
 body,
 html {
     background-color: #F9F5EB;
@@ -13,8 +12,65 @@ html {
     background-color: #EAE3D2;
 }
 
-h2.azulClaro, th.azulClaro {
+h2.centro {
+    text-align: center;
+}
+
+h2.azulClaro,
+th.azulClaro {
     font-size: 25px;
     font-family: 'Verdana';
     color: #607EAA;
 }
+
+.centro {
+    display: grid;
+    place-items: center;
+}
+
+td {
+    text-align: center;
+}
+
+a:link {
+    color: brown;
+}
+
+a:visited {
+    color: fuchsia;
+}
+
+a:hover {
+    color: lime;
+}
+
+a:active {
+    color: red;
+}
+
+ul {
+    list-style-image: url('../Aula02/img/check_circle_FILL0_wght400_GRAD0_opsz48.png');
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
