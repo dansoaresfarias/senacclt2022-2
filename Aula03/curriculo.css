@@ -1,0 +1,20 @@
+* {
+    font-family: Cambria;
+}
+
+
+body,
+html {
+    background-color: #F9F5EB;
+}
+
+#apresentacao,
+#footer {
+    background-color: #EAE3D2;
+}
+
+h2.azulClaro, th.azulClaro {
+    font-size: 25px;
+    font-family: 'Verdana';
+    color: #607EAA;
+}
