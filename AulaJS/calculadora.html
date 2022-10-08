@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="/materialize/css/materialize.min.css">
+    <title>Calculadora SENAC</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="center">Calculadora Prática JS - SENAC</h3>
+        <form class="container">
+            <fieldset>
+                <legend><b>Calculadora</b></legend>
+                <div class="container">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="num1" type="number" class="validate">
+                            <label for="num1">1º Número</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="num2" type="number" class="validate">
+                            <label for="num2">2º Número</label>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <button type="button" onclick="somar();">Somar</button>&nbsp
+                        <button type="button" onclick="subtrair();">Subtrair</button>&nbsp
+                        <button type="button" onclick="multiplicar();">Multiplicar</button>&nbsp
+                        <button type="button" onclick="dividir();">Dividir</button>
+                    </div>      
+                    <p id="resultado" class="center"></p>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="/materialize/js/materialize.min.js"></script>
+<script src="js/calculadora.js"></script>
+
+</html>
