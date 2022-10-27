@@ -17,6 +17,7 @@ public class Principal {
         Agencia agFacSenac = new Agencia(0023, "8132314545", "faculdade@bancosenac.com.br", endAgSenac);
         Cliente clienteLuis = new Cliente("Luis Ernani", "111.222.333-00", "luis@gmail.com", "978787887", new Date(1986, 11, 18), endCliente);
         Conta contaLuis = new Conta(123, clienteLuis, agFacSenac, 128.90, 1000);
+        System.out.println(contaLuis);
         System.out.println(contaLuis.getSaldo());
     }
 }

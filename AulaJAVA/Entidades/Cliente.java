@@ -69,4 +69,8 @@ public class Cliente {
         this.endereco = endereco;
     }
 
+    public String toString(){
+        return "Cliente: " + this.nome + "| CPF: " + this.cpf;
+    }
+
 }
