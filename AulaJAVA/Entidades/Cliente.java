@@ -9,18 +9,20 @@ public class Cliente {
     private String email;
     private String telefone;
     private Date dataNasc;
+    private Endereco endereco;
 
     // Método construtor vazio
     public Cliente() {
     }
 
     // Método construtor cheio
-    public Cliente(String nome, String cpf, String email, String telefone, Date dataNasc) {
+    public Cliente(String nome, String cpf, String email, String telefone, Date dataNasc, Endereco end) {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
         this.dataNasc = dataNasc;
+        this.endereco = end;
     }
 
     // Métodos Gets e Sets
@@ -57,6 +59,14 @@ public class Cliente {
 
     public Date getDataNasc() {
         return dataNasc;
-    }   
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
 
 }
