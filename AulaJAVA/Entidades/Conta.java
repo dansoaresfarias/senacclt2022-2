@@ -1,5 +1,8 @@
 package AulaJAVA.Entidades;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Conta {
     private int numero;
     private Cliente cliente;
@@ -7,8 +10,11 @@ public class Conta {
     private double saldo;
     private double limite;
     private boolean status;
+    private ArrayList<Transacao> transacoes;
 
     public Conta() {
+        this.status = true;
+        this.transacoes = new ArrayList<Transacao>();
     }
 
     public Conta(int numero, Cliente cliente, Agencia agencia, double saldo, double limite) {
@@ -18,11 +24,14 @@ public class Conta {
         this.saldo = saldo;
         this.limite = limite;
         this.status = true;
+        this.transacoes = new ArrayList<Transacao>();
     }
 
     public boolean sacar(double valor) {
         if (this.saldo + this.limite >= valor) {
             this.saldo -= valor;
+            Transacao trans = new Transacao(TipoTransacao.DÉBITO, new Date(), valor, this.getCliente(), '-');
+            this.transacoes.add(trans);
             return true;
         } else {
             return false;
@@ -32,6 +41,8 @@ public class Conta {
     public boolean depositar(double valor) {
         if (valor > 0) {
             this.saldo += valor;
+            Transacao trans = new Transacao(TipoTransacao.DEPÓSITO, new Date(), valor, this.getCliente(), '+');
+            this.transacoes.add(trans);
             return true;
         } else {
             return false;
@@ -39,17 +50,39 @@ public class Conta {
     }
 
     public boolean transferir(double valor, Conta contaFav) {
-        if(contaFav != null){
+        if (contaFav != null) {
             if (this.saldo + this.limite >= valor) {
-                this.saldo -=  valor;
+                // Retirando dinheiro da própria conta
+                this.saldo -= valor;
+                // Criando a transação de transferência retirando dinheiro da própria conta
+                Transacao transEmitente = new Transacao(TipoTransacao.TRANSFERÊNCIA, new Date(), valor,
+                        contaFav.getCliente(), '-');
+                // Adcionando a transação nas transações da própria conta
+                this.transacoes.add(transEmitente);
+                // Colocando dinheiro na conta favorecida
                 contaFav.saldo += valor;
+                // Criando a transação de transferência para a conta favorecida
+                Transacao transFav = new Transacao(TipoTransacao.TRANSFERÊNCIA, new Date(), valor, this.getCliente(),
+                        '+');
+                // Adcionando a transação nas transações da conta favorecida
+                contaFav.transacoes.add(transFav);
                 return true;
             } else {
                 return false;
             }
-        }else{
+        } else {
             return false;
         }
+    }
+
+    public String extrato() {
+        String extrato = "";
+        extrato += this.toString() + "\n";
+        for (Transacao trans : this.transacoes) {
+            extrato += trans.toString() + "\n" ;
+        }
+        extrato += "Saldo: R$ " + Math.round(this.saldo) + " | " + "Saldo Disponível R$ " + Math.round(this.saldo + this.limite);
+        return extrato;
     }
 
     public int getNumero() {
@@ -88,7 +121,13 @@ public class Conta {
         this.status = status;
     }
 
-    public String toString(){
+    @Override
+    public String toString() {
         return "Conta de número: " + this.numero + " | " + this.cliente.toString();
     }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+    
 }

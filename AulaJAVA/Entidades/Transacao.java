@@ -63,5 +63,9 @@ public class Transacao {
     public void setTipoValor(char tipoValor) {
         this.tipoValor = tipoValor;
     }
+    @Override
+    public String toString(){
+        return this.data.toString() + " | " + this.tipo + " | " + this.tipoValor + " R$ " + this.valor;
+    }
 
 }
