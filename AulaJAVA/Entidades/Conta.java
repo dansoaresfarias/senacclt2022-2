@@ -3,7 +3,7 @@ package AulaJAVA.Entidades;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Conta {
+public abstract class Conta {
     private int numero;
     private Cliente cliente;
     private Agencia agencia;
