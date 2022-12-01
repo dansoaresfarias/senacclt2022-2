@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Faculdade SENAC</title>
+</head>
+
+<body>
+    <th:block th:include="header"></th:block>
+    <form class="container" method="post">
+        <h3 class="center">Cadastro de Local de Evento</h3>
+        <div class="row">
+            <div class="input-field col s12">
+                <b>Sala: </b><input type="text" value="" name="sala" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <b>Andar: </b><input type="text" value="" name="andar" />
+            </div>
+            <div class="input-field col s6">
+                <b>Capacidade: </b><input type="number" value="" name="capacidade" />
+            </div>
+        </div>
+        <div class="container center">
+            <button type="submit" class="btn orange darken-3"><i
+                    class="material-icons left">event_available</i>Salvar</button>
+            <button type="reset" class="btn orange darken-3"><i
+                    class="material-icons left">event_busy</i>Cancelar</button>
+            <a href="/" class="waves-effect waves-light btn orange darken-3">
+                <i class="material-icons left">keyboard_arrow_left</i>Voltar
+            </a>
+        </div>
+    </form>
+    <th:block th:include="footer"></th:block>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1min.js"></script>
+</html>
