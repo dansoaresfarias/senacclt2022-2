@@ -80,3 +80,5 @@ if(qtdVotosDan > qtdVotosEgito && qtdVotosDan > qtdVotosAne){
 }else {
     alert("Eleição indefinida!");
 }
+
+alert("Luciano");
