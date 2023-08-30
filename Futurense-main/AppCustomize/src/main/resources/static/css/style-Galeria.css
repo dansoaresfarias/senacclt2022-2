@@ -1,0 +1,119 @@
+/* Código apenas para limpar os padrões */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/* cabeçalho */
+#head-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(37, 37, 39);
+}
+
+.main-menu ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.main-menu ul li a{
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+.main-menu ul li a:hover{
+    background-color: rgb(24, 139, 233);
+}
+
+.main-menu li:last-child a {
+    background-color: rgb(24, 139, 233);
+}
+
+.main-menu li:last-child a:hover {
+    background-color: rgb(18, 128, 218);
+}
+
+/* Corpo */
+.menu-showblack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37, 37, 39);
+    border-top: 0.1px solid  #7c7c7c;
+    color: #fff;
+    height: 80px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.menu-body{
+    position: relative;
+    min-height: 100vh;
+    background-color: #313131;
+    color: #fff;
+    border-top: 0.2px solid   #313131;
+    height: 500px;
+}
+
+.menu-body .image-content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.menu-body .image-content .image{
+    height: 125px;
+    width: 175px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.menu-body .image-content .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.menu-body .image-content .image:hover img{
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+.flogo{
+    width:20px;
+	height:20px;
+}
+
+footer{
+    border-top: 0.1px solid  #7c7c7c;
+    background-color: rgb(37, 37, 39);
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* As fontes usadas no site estão uma bagunça no momento, tenho que ajeitar depois */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');

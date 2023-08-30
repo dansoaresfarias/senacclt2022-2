@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Icon.svg" type="image/svg">
+    <title>Futurense - Idealizando o futuro </title>
+    <link rel="stylesheet" href="css/style-Loja.css" type="text/css">
+</head>
+
+<body>
+
+    <!-- cabeçalho -->
+    <th:block th:include="header"></th:block>
+
+    <!-- Corpo -->
+    <main id="content">
+        <section class="menu-showblack">
+            <P>Escolha o formato da sua placa</P>
+        </section>
+
+        <section class="menu-body">
+            <div class="card">
+                <a href="/forms/placa-circular">
+                    <div id="circle">
+                        <p>Seu texto aqui</p>
+                    </div>
+                </a>
+                <div class="text-content">
+                    <span class=card-title><strong>Placa Circular</strong></span>
+                </div>
+            </div>
+            <div class="card">
+                <a href="/forms/placa-octagona">
+                    <div id="octagonWrap">
+                        <div id="octagon">
+                            <p>Seu<br>texto aqui</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="text-content">
+                    <span class=card-title><strong>Placa Octagona</strong></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="/forms/placa-quadrada">
+                    <div id="square">
+                        <p>Seu texto aqui</p>
+                    </div>
+                </a>
+                <div class="text-content">
+                    <span class=card-title><strong>Placa Quadrada</strong></span>
+                </div>
+
+            </div>
+            <div class="card">
+                <a href="/forms/placa-retangular">
+                    <div id="rectangle">
+                        <p>Seu texto aqui</p>
+                    </div>
+                </a>
+                <div class="text-content">
+                    <span class=card-title><strong>Placa retangular</strong></span>
+                </div>
+            </div>
+            <div class="card">
+                <a href="/forms/placa-retangular-horizontal">
+                    <div id="rectangleHorizontal">
+                        <p>Seu texto aqui</p>
+                    </div>
+                </a>
+                <br>
+                <div class="text-content">
+                    <span class=card-title><strong>Placa retangular Horizontal</strong></span>
+                </div>
+            </div>
+            <div class="card">
+                <a href="/forms/placa-diamante">
+
+                    <div id="diamond">
+                        <p>Seu texto aqui</p>
+                    </div>
+
+                </a>
+                <br>
+                <div class="text-content">
+                    <span class=card-title><strong>Placa Diamante</strong></span>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <th:block th:include="footer"></th:block>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Icon.svg" type="image/svg">
+    <title>Futurense - Idealizando o futuro </title>
+    <link rel="stylesheet" href="css/style-cotacao.css">
+</head>
+
+<body>
+
+    <!-- cabeçalho --> 
+    <th:block th:include="header"></th:block>
+
+    <!-- Corpo --> 
+        <main id="content">
+            <section class="menu-showblack">
+                <P>Solicitar Cotação</P>
+    
+            </section>
+    
+            <section class="menu-body">
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <input type="hidden" name="accessKey" value="e0b6c8fc-c159-485c-b3ea-ab868539fba7">
+                    <div class="title">
+                        <h2>COTAÇÃO</h2>
+                    </div>
+                    <div class="input-group">
+                        <label for="NOME">Nome:</label>
+                        <br>
+                        <input type="text" id="Nome" name="$Nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="Sobrenome">Sobrenome:</label>
+                        <br>
+                        <input type="text" id="Sobrenome" name="$Sobrenome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="Email">Email:</label>
+                        <br>
+                        <input type="Email" id="Email" name="$Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="#Telefone" required placeholder="(xx) xxxxx-xxxx">
+                    </div>
+                    <div class="input-group">
+                        <label for="servico">Tipo do serviço:</label>
+                        <input type="text" id="servico" name="$Serviço" required
+                            placeholder="Placa / Piso tátil / Cordoalha">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group">
+                            <label for="Pedidos">Pedidos/Notas:</label>
+                            <br>
+                            <textarea id="Pedidos" rows="8" name="$Nota" required></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label>Prótotipo(Requisitos):</label>
+                            <br>
+                            <input type="file" name="$file" accept="image/*, application/pdf">
+                        </div>
+                        <input type="hidden" name="redirectTo"  value="http://localhost:8080/obrigado">
+                        <input type="submit" value="ENVIAR">
+                        &nbsp;&nbsp;
+                        <input type="reset" value="LIMPAR">
+                    </div>
+                </form>
+            </section>
+        </main>
+    <!-- Rodapé --> 
+    <th:block th:include="footer"></th:block>
+
+</body>
+
+</html>

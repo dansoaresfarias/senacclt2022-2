@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Icon.svg" type="image/svg">
+    <title>Futurense - Idealizando o futuro </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <th:block th:include="header"></th:block>
+
+    <main id="content">
+        <section class="banner">
+            <video autoplay muted loop>
+                <source src="movie/banner.mp4" type="video/mp4">
+            </video>
+            <div class="video-text">
+                <h1 class="video-texth1">O que fazemos?</h1>
+                <br>
+                <h2 class="video-texth2">Atendemos as necessidades dos nossos clientes, desde o projeto até a fabricação
+                    do produto.</h2>
+                <br>
+                <button class="video-button"><a href="Cotacao.html">Solicitar cotação</a></button>
+            </div>
+        </section>
+
+        <section class="menu-showblack">
+        </section>
+
+        <section class="menu-body">
+            <div class="card">
+                <div class="placa">
+                    <img src="img/placa.png" alt="Placa">
+                </div>
+                <div class="content">
+                    <h3>Placa</h3>
+                    <p>
+                        Fabricação de placas de comunicação visual em ampla variedade de modelos, padrões,
+                        acabamentos, materiais e cores, podendo ser utilizadas para os mais variados
+                        objetivos onde exista a necessidade de comunicação e informação direta, rápida e
+                        eficiente.
+                        Projetos personalizados com utilização de diversos materiais na fabricação da
+                        comunicação visual: braile com esferas de aço inox, acrílico, alumínio, aço inox, MDF e
+                        PVC.
+                    </p>
+                </div>
+
+                <button id="read_button">Read more</button>
+            </div>
+
+            <div class="card02">
+                <div class="placa">
+                    <img src="img/PTATIL.png" alt="Placa">
+                </div>
+
+                <div class="content">
+                    <h3>Piso tátil</h3>
+                    <p>
+                        Fabricação de piso tátil de alerta em aço inox 304, placas sob medida com espessura
+                        de 1mm, 25 cm de largura e até 200cm de comprimento, destinados a constituir
+                        alerta, servindo de orientação, principalmente, às pessoas com deficiência visual ou
+                        baixa visão. Fáceis de instalar, extremamente resistentes e praticamente livres de
+                        manutenção.
+                    </p>
+                </div>
+
+                <button id="read_button02">Read more</button>
+            </div>
+
+            <div class="card03">
+
+                <div class="placa">
+                    <img src="img/Cordoalhas.jpg" alt="Placa">
+                </div>
+
+                <div class="content">
+                    <h3>Cordoalha</h3>
+                    <p>
+                        Fabricação sob encomenda e recuperação de cordoalhas chatas flexíveis em cobre.
+                        Utilizamos cobre especial, em lâminas de espessura ≥0,10 mm, para maior
+                        flexibilidade, durabilidade e resistência. Suportam a transmissão de uma maior
+                        densidade de corrente elétrica e os conectores aplicados em suas extremidades
+                        mantêm todo o conjunto unido aos pontos de fixação.
+                    </p>
+                </div>
+
+                <button id="read_button03">Read more</button>
+            </div>
+
+            <script src="js/script.js"></script>
+        </section>
+    </main>
+
+    <th:block th:include="footer"></th:block>
+
+</body>
+
+</html>

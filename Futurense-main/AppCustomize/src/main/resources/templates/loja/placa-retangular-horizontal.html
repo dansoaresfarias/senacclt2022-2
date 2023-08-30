@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" th:href="@{/img/Icon.svg}" type="image/svg">
+    <title>Futurense - Idealizando o futuro </title>
+    <link th:href="@{/css/style-Forms.css}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <th:block th:include="header"></th:block>
+
+    <!-- Corpo -->
+    <main id="content">
+        <section class="menu-showblack">
+            <P>Loja</P>
+        </section>
+
+        <section class="menu-body">
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 center">
+                            <div id="rectangleHorizontal">
+                                <p>Seu texto aqui</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="title">
+                                <h2>SOLICITAÇÃO</h2>
+                            </div>
+                            <div id="input-group">
+                                
+                                <input type="hidden" name="$PLACA RETANGULAR HORIZONTAL">
+                                <label for="textoPlaca">Texto da placa:</label>
+                                <input type="text" id="textoPlaca" name="$Texto da placa" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="corTexto">Cor do texto:</label>
+                                <select id="corTexto" name="$Cor do texto">
+                                    <option value="black">Preto</option>
+                                    <option value="white">Branco</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="corPlaca">Cor da Placa:</label>
+
+                                <select id="corPlaca" name="$Cor da placa">
+                                    <option value="black">Preto</option>
+                                    <option value="white">Branco</option>
+                                    <option value="blue">Azul</option>
+                                    <option value="red">Vermelho</option>
+                                    <option value="green">Verde</option>
+                                    <option value="yellow">Amarelo</option>
+                                    <option value="purple">Roxo</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="TAMANHO">Tamanho da Placa:</label>
+                                <select id="TAMANHO" name="$Tamanho da Placa:">
+                                    <option value="18″ x 18″">18″ x 18″</option>
+                                    <option value="24″ x 24″">24″ x 24″</option>
+                                    <option value="30″ x 30″">30″ x 30″</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="Pedidos">Pedidos/Notas:</label>
+                                <textarea id="Pedidos" rows="8" name="$mensagem" required></textarea>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="Quantidade">Quantidade:</label>
+                                <input type="number" id="number" step="1" min="1" max="" value="1" name="$Quantidade">
+                            </div>
+                            <div class="input-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="$Nome" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email para contato:</label>
+                                <input type="text" name="$Email" required>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="hidden" name="subject" value="SOLICITAÇÃO DE COTAÇÃO PLACA RETANGULAR HORIZONTAL">
+                                <input type="hidden" name="accessKey" value="e3ce9c94-f723-4467-9b31-ec98906af926">
+                                <input type="hidden" name="redirectTo"  value="http://localhost:8080/obrigado">
+                                <input type="submit" value="ENVIAR">
+                                &nbsp;&nbsp;
+                                <input type="reset" value="LIMPAR">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <script>
+                document.getElementById("corPlaca").onchange = function () {
+                    console.log("Sign color has changed");
+                    var select = document.getElementById("corPlaca").value;
+                    let shape = document.querySelector('#rectangleHorizontal').style.background = select;
+
+                }
+
+                document.getElementById("corTexto").onchange = function () {
+                    console.log("Text color has changed");
+                    var select = document.getElementById("corTexto").value;
+                    let shape = document.querySelector('#rectangleHorizontal').style.color = select;
+
+                }
+
+                document.getElementById("textoPlaca").onkeyup = function () {
+                    console.log("Text has changed");
+                    var select = document.getElementById("textoPlaca").value;
+                    let shape = document.querySelector('#rectangleHorizontal').innerHTML = select;
+                }
+            </script>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <th:block th:include="footer"></th:block>
+</body>
+
+</html>

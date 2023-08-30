@@ -1,0 +1,278 @@
+/* Código apenas para limpar os padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* cabeçalho */
+#head-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(37, 37, 39);
+}
+
+.main-menu ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.main-menu ul li a {
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+.main-menu ul li a:hover {
+    background-color: rgb(24, 139, 233);
+}
+
+.main-menu li:last-child a {
+    background-color: rgb(24, 139, 233);
+}
+
+.main-menu li:last-child a:hover {
+    background-color: rgb(18, 128, 218);
+}
+
+/* Corpo */
+.menu-showblack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37, 37, 39);
+    border-top: 0.1px solid #7c7c7c;
+    color: #fff;
+    height: 80px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.menu-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    background-color: #313131;
+    color: #fff;
+    border-top: 0.2px solid rgb(37, 37, 39);
+    height: 800px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 350px;
+    position: relative;
+    border-radius: 2px;
+    background-color: #313131;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+
+.text-content {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-button {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffff;
+    background-color: rgb(24, 139, 233);
+    width: 242px;
+    height: 50px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.card-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card-button:hover {
+    background-color: rgb(18, 128, 218);
+}
+
+/*SHAPES*/
+
+p{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#square
+{
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    color:black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 36px;
+    border: 2px solid black;
+}
+
+
+#rectangle {
+    width: 250px;
+    height: 150px;
+    background: #fff;
+    color:black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 36px;
+    border: 2px solid black;
+}
+
+#rectangleHorizontal{
+    width: 150px;
+    height: 250px;
+    background: #fff;
+    color:black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 36px;
+    border: 2px solid black;
+}
+
+#circle {
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 50%;
+    color:black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 36px;
+    border: 2px solid black;
+    display: flex;
+}
+
+#octagonWrap {
+    width:150px;
+    height:150px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+#octagon {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    background: #fff;
+    border: 2px solid black;
+}
+#octagon:before {
+    position: absolute;
+    /* There needs to be a negative value here to cancel
+     * out the width of the border. It's currently -3px,
+     * but if the border were 5px, then it'd be -5px.
+     */
+    top: -3px; right: -3px; bottom: -3px; left: -3px;
+    transform: rotate(45deg);
+    content: '';
+    border: inherit;
+    
+}
+#octagon p{
+    color: black;
+    align-items: left;
+    text-align: center;
+    justify-content: left;
+    font-size: 34px;
+    transform: rotate(-45deg);
+    margin-right: 15px;
+}
+
+#diamond {
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    color: black;
+    border: 2px solid black;
+    
+}
+#diamond p{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 34px;
+    transform: rotate(45deg);
+    width: auto;
+    height: auto;
+}
+
+
+
+
+/* Rodapé */
+.flogo {
+    width: 20px;
+    height: 20px;
+}
+
+footer {
+    border-top: 0.1px solid #7c7c7c;
+    background-color: rgb(37, 37, 39);
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* As fontes usadas no site estão uma bagunça no momento, tenho que ajeitar depois */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
