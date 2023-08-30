@@ -4,7 +4,7 @@ const MES = {
     mar : "MARZO",
     abr : "ABRIL",
     mai : "MAYO",
-    jun : "JUNIO"
+    jun : "Junho"
 }
 
 var op = "SIM";
