@@ -13,3 +13,5 @@ function fatorial(num) {
         return fatorial(num - 1) * num;
     }
 }
+
+alert("Daniel");
